@@ -1,5 +1,7 @@
 package fr.fms.api.training.entities;
 
+
+import com.sun.org.apache.xpath.internal.objects.XString;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,15 +14,13 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-@AllArgsConstructor @NoArgsConstructor @ToString @Data
-public class Training implements Serializable {
-    private static final long serialVersionUID = 1L;
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Data
+public class Image implements Serializable {
+    private static final Long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String description;
-    private double price;
-    private int quantity;
-    private String image;
 }
